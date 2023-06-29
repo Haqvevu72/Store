@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="LightYellow"></GradientStop>
+                <GradientStop Color="LightPink" Offset="1"></GradientStop>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!--Search Bar-->
+        <TextBox Width="250" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="50,15,0,0" BorderThickness="2" BorderBrush="Black"></TextBox>
+
+        <!--Prodducts-->
+        <DockPanel Height="341" Margin="0,30,0,0">
+
+
+            <Image DockPanel.Dock="Left" Source="Pictures\clipart-children-shopping-15.png" Height="45" Width="45" VerticalAlignment="Top"></Image>
+            <ListView DockPanel.Dock="Right" Margin="10,0,10,0">
+                <!--Style-->
+                <ListView.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="LightYellow"></GradientStop>
+                        <GradientStop Color="LightPink" Offset="1"></GradientStop>
+                    </LinearGradientBrush>
+                </ListView.Background>
+                <StackPanel Orientation="Horizontal">
+                    <Button Height="80" Width="80" Margin="90,0,0,0"></Button>
+                    <Button Height="80" Width="80" Margin="90,0,0,0"></Button>
+                    <Button Height="80" Width="80" Margin="90,0,0,0"></Button>
+                    <Button Height="80" Width="80" Margin="90,0,0,0"></Button>
+                </StackPanel>
+            </ListView>
+        </DockPanel>
+
+    </Grid>
+</Window>
