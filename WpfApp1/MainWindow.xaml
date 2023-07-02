@@ -24,32 +24,29 @@
             <Image DockPanel.Dock="Left" Source="Pictures\clipart-children-shopping-15.png" Height="45" Width="45" VerticalAlignment="Top"></Image>
             <ListView Name="Bravo" DockPanel.Dock="Right" Margin="10,0,10,0">
                 <!--Style-->
-                <!--<ListView.Background>
+                <ListView.Background>
                     <LinearGradientBrush>
                         <GradientStop Color="LightYellow"></GradientStop>
                         <GradientStop Color="LightPink" Offset="1"></GradientStop>
                     </LinearGradientBrush>
-                </ListView.Background>-->
-                <StackPanel Orientation="Horizontal">
-                    <StackPanel>
-                        <Button Height="80" Width="80" Margin="90,0,0,0">
-                            <Image Source="{Binding ImagePath}"></Image>
-                        </Button>
-                        <TextBlock FontSize="14" Margin="100,0,0,0"></TextBlock>
-                    </StackPanel>
-                    <StackPanel>
-                        <Button Height="80" Width="80" Margin="90,0,0,0"></Button>
-                        <TextBlock FontSize="14" Margin="100,0,0,0"></TextBlock>
-                    </StackPanel>
-                    <StackPanel>
-                        <Button Height="80" Width="80" Margin="90,0,0,0"></Button>
-                        <TextBlock FontSize="14" Margin="100,0,0,0"></TextBlock>
-                    </StackPanel>
-                    <StackPanel>
-                        <Button Height="80" Width="80" Margin="90,0,0,0"></Button>
-                        <TextBlock FontSize="14" Margin="100,0,0,0"></TextBlock>
-                    </StackPanel>
-                </StackPanel>
+                </ListView.Background>
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Height="80" Width="80" Margin="90,0,0,0">
+                                <Image Source="{Binding ImagePath}"></Image>
+                            </Button>
+
+                            <!--Name-->
+                            <StackPanel>
+                                <TextBlock FontSize="14" Margin="10,0,0,0" Text="{Binding Name}"></TextBlock>
+                                <TextBlock FontSize="14" Margin="10,0,0,0" Text="{Binding Cost}"></TextBlock>
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
             </ListView>
         </DockPanel>
 

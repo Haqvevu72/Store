@@ -22,10 +22,10 @@ namespace WpfApp1
     {
         List<product> Products = new List<product>() 
         {
-            new product("ProductImages\\cola.jpg","Coca-Cola",12.4),
-            new product("ProductImages\\lays.jpg", "Lays",13.5),
-            new product("ProductImages\\pepsi.jpg", "Pepsi",12.3),
-            new product("ProductImages\\sprite.jpg", "Sprite",13.4)
+            new product("ProductImages\\cola.jpg","Coca-Cola","12.4$"),
+            new product("ProductImages\\lays.jpg", "Lays","13.5$"),
+            new product("ProductImages\\pepsi.jpg", "Pepsi","12.3$"),
+            new product("ProductImages\\sprite.jpg", "Sprite","13.4$")
         };
         public MainWindow()
         {

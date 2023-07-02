@@ -10,9 +10,9 @@ namespace WpfApp1
     {
         public string ImagePath { get; set; }
         public string Name { get; set; }
-        public double Cost { get; set; }
+        public string Cost { get; set; }
 
-        public product(string path,string name, double cost)
+        public product(string path,string name, string cost)
         {
             ImagePath = path;
             Name = name;
