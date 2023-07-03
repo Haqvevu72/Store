@@ -32,5 +32,32 @@ namespace WpfApp1
             InitializeComponent();
             Bravo.ItemsSource = Products;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            StackPanel stackPanel = button.Parent as StackPanel;
+            StackPanel namecost = stackPanel.Children[1] as StackPanel;
+            TextBlock name = namecost.Children[0] as TextBlock;
+            TextBlock cost = namecost.Children[1] as TextBlock;
+            Image image = button.Content as Image;
+            BitmapImage bitmapImage = new BitmapImage(new Uri(image.Source.ToString(), UriKind.RelativeOrAbsolute));
+
+            Product product =new Product();
+            
+            Button Pbutton = (Button)product.FindName("image");
+            Image Pimage = Pbutton.Content as Image;
+            Pimage.Source = bitmapImage;
+
+            StackPanel Name = (StackPanel)product.FindName("name");
+            TextBox Pname = Name.Children[1] as TextBox;
+            Pname.Text = name.Text;
+
+            StackPanel Cost = (StackPanel)product.FindName("cost");
+            TextBox Pcost = Cost.Children[1] as TextBox;
+            Pcost.Text = cost.Text;
+
+            product.Show();
+        }
     }
 }

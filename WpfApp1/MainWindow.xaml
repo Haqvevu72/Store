@@ -34,7 +34,7 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <Button Height="80" Width="80" Margin="90,0,0,0">
+                            <Button Height="80" Width="80" Margin="90,0,0,0" BorderThickness="0" BorderBrush="Transparent" Click="Button_Click">
                                 <Image Source="{Binding ImagePath}"></Image>
                             </Button>
 

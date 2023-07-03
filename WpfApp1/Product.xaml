@@ -14,16 +14,18 @@
             </LinearGradientBrush>
         </Grid.Background>
         <StackPanel>
-            <Button VerticalAlignment="Top" HorizontalAlignment="Center" Width="105" Height="105" Margin="0,20,0,0"></Button>
+            <Button Name="image" VerticalAlignment="Top" HorizontalAlignment="Center" Width="105" Height="105" Margin="0,20,0,0">
+                <Image></Image>
+            </Button>
             <!--Name-->
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Name="name" Orientation="Horizontal">
                 <Label Margin="10,20,0,0" FontSize="14">Name:</Label>
-                <TextBlock Margin="10,25,0,0" FontSize="14">Coca-Cola</TextBlock>
+                <TextBox Margin="10,25,0,0" FontSize="14"></TextBox>
             </StackPanel>
             <!--Cost-->
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Name="cost"  Orientation="Horizontal">
                 <Label Margin="10,5,0,0" FontSize="14">Cost:</Label>
-                <TextBlock Margin="10,10,0,0" FontSize="14">15$</TextBlock>
+                <TextBox Margin="10,10,0,0" FontSize="14"></TextBox>
             </StackPanel>
         </StackPanel>
         <!--Edit-->
